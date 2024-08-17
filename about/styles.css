@@ -1,57 +1,74 @@
 *{
     background-color: bisque;
 }
-html{
-    scroll-behavior: smooth;
-}
 
-body{
-    margin: 0;
-    padding: 0;
-}
-
-.card button {
- padding: 0.8em 1.8em;
- border: 2px solid #17C3B2;
- position: relative;
- overflow: hidden;
- background-color: transparent;
- text-align: center;
- text-transform: uppercase;
- font-size: 16px;
- transition: .3s;
- z-index: 1;
- font-family: inherit;
- color: #17C3B2;
-}
-
-button::before {
- content: '';
- width: 0;
- height: 300%;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%) rotate(45deg);
- background: #17C3B2;
- transition: .5s ease;
- display: block;
- z-index: -1;
-}
-
-button:hover::before {
- width: 105%;
-}
-
-button:hover {
- color: #111;
-}
-
+.button {
+    --color: #e5f5f1;
+    height: 20px;
+    width: 100px;
+    padding: 0.8em 1.5em;
+    margin: 0 auto;
+    text-decoration: none;
+    object-position: center;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   .button a {
+    text-decoration: none;
+    background-color: transparent;
+   }
+   
+   .button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .button:hover {
+    color: rgb(10, 25, 30);
+   }
+   
+   .button:active {
+    filter: brightness(.8);
+   }
+   
 .card-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: fit-content;
 
 }
 
@@ -94,9 +111,22 @@ button:hover {
     background-color: #7a7676;
 }
 
-footer {
-    background-color: #333;
-    color: red;
-    text-align: center;
-    padding: 10px 0;
+footer{
+    color: rgb(9, 114, 133);
+    height: 20px;
+    width: 100vw;
+    padding: 0.8em 1.5em;
+    margin: 0 auto;
+    text-align:center ;
+    text-decoration: none;
+    object-position: center;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    font-family: inherit;
+    z-index: 1;
 }
