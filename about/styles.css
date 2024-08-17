@@ -10,7 +10,7 @@ body{
     padding: 0;
 }
 
-button {
+.card button {
  padding: 0.8em 1.8em;
  border: 2px solid #17C3B2;
  position: relative;
